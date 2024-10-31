@@ -51,6 +51,19 @@ public class LinearEquation {
         return roundedToHundredth((y1-slope()*x1));
     }
 
+    public String lineInfo() {
+        equation();
+        if (!this.isVerticalLine()) {
+            return "The two points are: (" + this.getX1() + ", " + this.getY1() + ") and (" + this.getX2() + ", " + this.getY2() + ")"+
+            "\nThe equation of the line between these points is: " + this.equation()+
+            "\nThe slope of this line is: " + this.slope()+
+            "\nThe y-intercept of the line is: " + this.yIntercept()+
+            "\nThe distance between the two points is: " + this.distance();
+        } else {
+            return "These points are on a vertical line: " + this.equation();
+        }
+    }
+
     public String equation() {
         if (yIntercept()>0) {
             if (niceSlope&&slope()!=1&&slope()!=-1&&slope()!=0) {

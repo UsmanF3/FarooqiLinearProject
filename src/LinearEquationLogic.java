@@ -33,7 +33,6 @@ public class LinearEquationLogic {
         } else {
             System.out.println("These points are on a vertical line: " + line.equation());
         }
-
     }
 
     private void askX() {
