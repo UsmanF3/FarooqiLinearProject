@@ -36,11 +36,13 @@ public class LinearEquationLogic {
     }
 
     private void askX() {
-        System.out.println();
-        System.out.print("Enter a value for x: ");
-        double valueForX = scan.nextDouble();
-        scan.nextLine();
-        System.out.println("The point on the line is: " + line.coordinateForX(valueForX));
+        if (!line.isVerticalLine()) {
+            System.out.println();
+            System.out.print("Enter a value for x: ");
+            double valueForX = scan.nextDouble();
+            scan.nextLine();
+            System.out.println("The point on the line is: " + line.coordinateForX(valueForX));
+        }
     }
 
     public void run() {
